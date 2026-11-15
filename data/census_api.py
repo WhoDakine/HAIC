@@ -252,11 +252,22 @@ def get_district_data(chamber, district):
     Uses the 2020-2024 ACS 5-Year Estimates.
     """
 
+    chamber = chamber.strip().lower()
+
+    district_limits = {
+        "house": 51,
+        "senate": 25
+    }
+
+    if chamber not in district_limits:
+        raise ValueError("Chamber must be House or Senate.")
+
     district = int(district)
 
-    if district < 1:
+    if not 1 <= district <= district_limits[chamber]:
         raise ValueError(
-            "Invalid district number."
+            f"Invalid {chamber.title()} district. "
+            f"Choose a number from 1 to {district_limits[chamber]}."
         )
 
     geography = get_geography(chamber)
