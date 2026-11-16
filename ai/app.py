@@ -43,6 +43,10 @@ st.markdown(
         border-bottom: 1px solid var(--line);
     }
 
+    [data-testid="stMainMenu"] {
+        display: none;
+    }
+
     [data-testid="stMainBlockContainer"] {
         max-width: 820px;
         padding-top: 2.5rem;
