@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#f6f5f0">
+	<title>Chat | Hawaii Legislative Assistant</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/site.css">
+</head>
+<body class="chat-page">
+	<div class="chat-shell">
+		<aside class="chat-sidebar" id="chat-sidebar" aria-label="Conversation menu">
+			<div class="sidebar-top">
+				<a class="wordmark" href="index.html" aria-label="Hawaii Legislative Assistant home">
+					<span class="wordmark-mark" aria-hidden="true">H</span>
+					<span>Hawaii Legislative<br>Assistant</span>
+				</a>
+				<button class="icon-button sidebar-close" type="button" data-close-sidebar aria-label="Close menu" title="Close menu">
+					<span aria-hidden="true">&#215;</span>
+				</button>
+			</div>
+			<button class="new-chat-button" type="button" data-new-chat><span aria-hidden="true">+</span> New conversation</button>
+			<p class="sidebar-label">Recent</p>
+			<div class="conversation-list">
+				<button class="conversation-item is-current" type="button" data-new-chat>
+					<span class="conversation-indicator" aria-hidden="true"></span>
+					<span>New conversation</span>
+				</button>
+			</div>
+			<div class="sidebar-bottom">
+				<p>Prototype version</p>
+				<a href="index.html">About this assistant</a>
+			</div>
+		</aside>
+
+		<div class="chat-main">
+			<header class="chat-header">
+				<button class="icon-button menu-toggle" type="button" data-open-sidebar aria-label="Open menu" title="Open menu">
+					<span aria-hidden="true">&#9776;</span>
+				</button>
+				<div class="chat-heading">
+					<span class="chat-heading-title">Legislative Assistant</span>
+					<span class="prototype-badge">Prototype</span>
+				</div>
+				<a class="home-link" href="index.html">Home <span aria-hidden="true">&#8599;</span></a>
+			</header>
+
+			<main class="chat-content">
+				<section class="conversation" aria-label="Chat conversation">
+					<div class="welcome-state" data-welcome>
+						<p class="eyebrow"><span class="eyebrow-dot"></span> Here to help you explore</p>
+						<h1>What are you<br>working on?</h1>
+						<p class="welcome-copy">Ask about a bill, a policy topic, or a piece of public data. This prototype is not connected to a live assistant yet.</p>
+						<div class="prompt-grid" aria-label="Suggested questions">
+							<button class="prompt-card" type="button" data-prompt="How does a bill move through the Hawaii Legislature?">
+								<span class="prompt-category">LEGISLATIVE PROCESS</span>
+								<span>How does a bill move through the Legislature?</span>
+								<span class="prompt-arrow" aria-hidden="true">&#8599;</span>
+							</button>
+							<button class="prompt-card" type="button" data-prompt="Where can I find Hawaii census data?">
+								<span class="prompt-category">PUBLIC DATA</span>
+								<span>Where can I find Hawaii census data?</span>
+								<span class="prompt-arrow" aria-hidden="true">&#8599;</span>
+							</button>
+							<button class="prompt-card" type="button" data-prompt="What should I know about a policy topic?">
+								<span class="prompt-category">POLICY RESEARCH</span>
+								<span>What should I know about a policy topic?</span>
+								<span class="prompt-arrow" aria-hidden="true">&#8599;</span>
+							</button>
+						</div>
+					</div>
+					<div class="message-list" data-message-list aria-live="polite" aria-relevant="additions"></div>
+				</section>
+
+				<form class="composer" data-chat-form>
+					<label class="visually-hidden" for="chat-input">Message the assistant</label>
+					<textarea id="chat-input" name="message" rows="1" placeholder="Ask a question..." maxlength="2000" required></textarea>
+					<button class="send-button" type="submit" aria-label="Send message" title="Send message"><span aria-hidden="true">&#8593;</span></button>
+					<p class="composer-note">A prototype only. Verify legislative information with an official source.</p>
+				</form>
+			</main>
+		</div>
+	</div>
+	<div class="sidebar-scrim" data-close-sidebar aria-hidden="true"></div>
+	<script src="../js/app.js" defer></script>
+</body>
+</html>
