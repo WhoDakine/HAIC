@@ -18,7 +18,7 @@ if (chatForm) {
 
     const label = document.createElement("span");
     label.className = "message-role";
-    label.textContent = role === "user" ? "You" : "Assistant prototype";
+    label.textContent = role === "user" ? "You" : "Assistant";
 
     const content = document.createElement("p");
     content.className = "message-text";
@@ -35,7 +35,7 @@ if (chatForm) {
 
     welcome.hidden = true;
     addMessage("user", message);
-    addMessage("assistant", "Thanks for trying the prototype. The assistant is not connected yet, so it cannot answer questions. Please check an official Hawaii legislative source for current information.");
+    addMessage("assistant", "Please open the live assistant from the home page to ask a question.");
     input.value = "";
     input.style.height = "auto";
   };
