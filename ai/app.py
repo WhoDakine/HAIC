@@ -1,11 +1,13 @@
+from pathlib import Path
+
 import streamlit as st
 
 from ai.main import answer_question
 
 
 st.set_page_config(
-    page_title="Hawaii Legislative AI",
-    page_icon="🏛️",
+    page_title="Legislative Engineered Intelligence",
+    page_icon=str(Path(__file__).with_name("lei-icon.svg")),
     layout="centered"
 )
 
@@ -190,6 +192,35 @@ st.markdown(
     hr {
         border-color: var(--line) !important;
     }
+
+    .lei-chat-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 8px;
+    }
+
+    .lei-chat-title h1 {
+        margin: 0;
+        color: var(--ink);
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .lei-chat-title-mark {
+        width: 34px;
+        height: 34px;
+        flex: 0 0 34px;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--coral);
+        border-radius: 50%;
+        color: var(--coral);
+        font-family: "DM Sans", "Segoe UI", sans-serif;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: .03em;
+    }
     </style>
     """,
     unsafe_allow_html=True
@@ -204,7 +235,11 @@ if "legislator" not in st.session_state:
 
 
 # Header
-st.title("🏛️ Hawaii Legislative AI")
+st.markdown(
+    '<div class="lei-chat-title"><span class="lei-chat-title-mark" aria-hidden="true">LEI</span>'
+    '<h1>Legislative Engineered Intelligence</h1></div>',
+    unsafe_allow_html=True
+)
 
 st.caption(
     "Government assistance research assistant"
