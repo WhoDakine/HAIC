@@ -81,6 +81,11 @@ st.markdown(
         color: var(--coral) !important;
     }
 
+    [data-testid="stAlertContentError"] [data-testid="stMarkdownContainer"],
+    [data-testid="stAlertContentError"] [data-testid="stMarkdownContainer"] * {
+        color: #2f2d2b !important;
+    }
+
     [data-testid="stSidebar"] {
         background: #1c2622 !important;
         border-right: 1px solid var(--line);
