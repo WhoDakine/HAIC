@@ -123,6 +123,10 @@ st.markdown(
         color: var(--ink) !important;
     }
 
+    [data-testid="stTextArea"] textarea {
+        color: #2f2d2b !important;
+    }
+
     input::placeholder,
     textarea::placeholder {
         color: var(--muted) !important;
@@ -196,6 +200,10 @@ st.markdown(
 
     [data-testid="stChatInput"] {
         background: transparent !important;
+    }
+
+    [data-testid="stBottom"] > div {
+        background: var(--paper-light) !important;
     }
 
     hr {
