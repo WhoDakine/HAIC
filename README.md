@@ -1,3 +1,5 @@
+NOTE: HOST DEVICE IS CURRENTLY DOWN, SERVICES ARE NOT WORKING; WILL FIX BY 12:30pm TODAY
+
 The Marauder's submission for Hawaii Annual Innovation Challenge 2026
 
 Using Python, we developed an AI-powered chatbot designed to help Hawaiʻi legislators identify relevant state and federal assistance programs for their districts. The application uses Ollama to run a local language model, while Streamlit provides the user interface. The chatbot integrates public government datasets into a SQL database to build district profiles and generate relevant program recommendations.
